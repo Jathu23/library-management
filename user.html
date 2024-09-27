@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <div id="profile" class="user-info">
+            <img src="user.jpg" alt="User Profile Picture" class="profile-picture">
+            <span class="user-name" id="username">John Doe Doe</span>
+        </div>
+        <div class="menu_items">
+            <ul>
+                <li id="dashboard">Dashboard</li>
+                <li id="browed-book">Browed-books</li>
+                <li id="view-book">View-Books</li>
+                <li id="Requst">Requst </li>
+                <li id="History">History</li>
+                <li id="notifcations">Notifcations</li>
+                <li id="log-out">Log-out</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="menu-contant">
+
+        <div class="dass-items" id="dass-items-div">
+            <div class="dass-box">
+                <h3>Total-brow-times</h3>
+                <h3>17</h3>
+            </div>
+            <div class="dass-box">
+                <h3>Brow-Books</h3>
+                <h3></h3>
+            </div>
+            <div class="dass-box">
+                <h3>Not-Return-Yet</h3>
+                <h3></h3>
+            </div>
+            <div class="dass-box">
+                <h3>no-info</h3>
+                <h3></h3>
+            </div>
+            <div class="dass-box">
+                <h3>no-info</h3>
+                <h3></h3>
+            </div>
+            <div class="dass-box">
+                <h3>no-info</h3>
+                <h3></h3>
+            </div>
+        </div>
+
+        <div class="browed-books display-none" id="browed-books-div">
+            <div class="search">
+                <button class="search-btn">Search</button>
+                <input class="search-input" type="text" placeholder="search hear">
+            </div>
+            <div class="brow-bookmenu-buttons">
+                <button>Curent</button>
+                <button>Expired</button>
+            </div>
+            <div class="brow-booktable comon-table-div">
+                <table class="table-style" id="browbook_table">
+
+
+                </table>
+            </div>
+        </div>
+
+        <div class="view-books display-none" id="view-books-div">
+            <div class="view-booksoption">
+                <div class="view-optionbuttons">
+                    <button>All-Books</button>
+                    <button>Popular</button>
+                    <select>
+                        <option value="audi">Catagary's</option>
+                        <option value="volvo">Author</option>
+                        <option value="saab">Publish-Date</option>
+                        <option value="mercedes">Garner</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="view-booktable comon-table-div">
+                <table class="table-style" id="All_books">
+         
+                </table>
+            </div>
+        </div>
+
+        <div class="requst display-none" id="requst-div">
+            <div class="requst-option">
+                <button id="addrequst_btn">Add-Requst</button>
+            </div>
+            <div class="requst-viewtable comon-table-div">
+                <table class="table-style" id="requst_table">
+                
+                </table>
+            </div>
+            
+            
+            <div id="bookModal" class="modal">
+                <div class="modal-content">
+                    <span id="close_requst" class="close">&times;</span>
+                    <h2 class="modal-title">Book Details</h2>
+                    <form id="bookForm">
+                        <label for="title">Book Title:</label>
+                        <input type="text" id="title" name="title" class="form-input" required><br><br>
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author" class="form-input" required><br><br>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea><br><br>
+                        <button type="submit" class="btn-primary">Post</button>
+                    </form>
+                </div>
+            </div>
+            
+
+
+        </div>
+
+        <div class="user-history display-none" id="user-history-div">
+            <div class="history-options">
+                <div class="title">
+                    <h3 id="historyoption-title">Brrow-History</h3>
+                </div>
+                <div class="history-option">
+                    <button id="browhistory">Brow-History</button>
+                    <button id="returnhistory">Return-Hisory</button>
+                </div>
+                <div class="history-control">
+                    <button>Resent</button>
+                    <button>Last-Week</button>
+                    <button>Last-Month</button>
+                    <button>All</button>
+                </div>
+            </div>
+            <div class="history-viewtable comon-table-div">
+                <table class="table-style" id="history_table">
+                  
+                </table>
+            </div>
+        </div>
+
+        <div class="notifcations display-none" id="notifcations-div">
+            <div class="notifcations-control">
+                <div class="inventory-button">
+                    <button>Resent</button>
+                    <button>Last-Week</button>
+                    <button>All-Notifcations</button>
+
+                </div>
+                <div class="search">
+                    <button class="search-btn">Search</button>
+                    <input class="search-input" type="text" placeholder="search hear">
+                </div>
+            </div>
+            <div class="notifcations-tabel comon-table-div">
+                <table class="table-style" id="notifcations_table">
+                   
+                </table>
+            </div>
+        </div>
+
+        <div id="userinfo" class="modal">
+            <div class="modal-content">
+                <span id="close_profile" class="close">&times;</span>
+                <h2 class="modal-title">Edit-Profile</h2>
+                <form id="profile_form">
+                    <label >First-Name:</label>
+                    <input type="text" id="f_name" class="form-input" required><br>
+                    <label >Last-Name:</label>
+                    <input type="text" id="l_name" class="form-input" required><br>
+                    <label >Phone-Number:</label>
+                    <input type="text" id="phone" class="form-input" required><br>
+                    <label >NIC:</label>
+                    <input type="text" id="nic" class="form-input" disabled><br>
+                    <label >E-mail:</label>
+                    <input type="text" id="email" class="form-input" disabled><br>
+
+                    <label >Profile-picture:</label>
+                <input type="file"><br><br>
+                    <button type="submit" class="btn-primary">update</button>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="user.js"></script>
+    <script src="user_menu_control.js"></script>
+</body>
+
+</html>

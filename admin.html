@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <div class="admin-info">
+            <h3>Administrator</h3>
+        </div>
+        <div class="menu_items">
+            <ul>
+                <li id="dashboard">Dashboard</li>
+                <li id="issue-book">Issues-book</li>
+                <li id="add-book">Add-book</li>
+                <li id="receive-book">Receive-book</li>
+                <li id="inventory">Inventory</li>
+                <li id="requst">Requsts</li>
+                <li id="notifcations">Notifcations</li>
+                <li id="manage-user">Manage-user</li>
+                <li id="history">History</li>
+                <li id="report">Report</li>
+                <li id="log-out">log-out</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="menu-contant">
+
+
+        <div id="dass-items-div">
+            <div class="dash-clock">
+
+            </div>
+            <div class="dass-items" id="dass-items">
+                <div class="dass-box">
+                    <h3>Total-Books</h3>
+                    <h3>1257</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Issue-Books</h3>
+                    <h3>122</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Not Return-Yet</h3>
+                    <h3>245</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Issue-To-Day</h3>
+                    <h3>65</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Total-Users</h3>
+                    <h3>344</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Browed-Users</h3>
+                    <h3>344</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Requsts</h3>
+                    <h3>6756</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Notifications</h3>
+                    <h3>344</h3>
+                </div>
+                <div class="dass-box">
+                    <h3>Rent-count</h3>
+                    <h3>344</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="issue-book display-none" id="issue-book-div">
+
+            <div class="issue-div">
+
+                <form id="issue-bookform">
+                    <div class="issue-book-inputs-div">
+                        <h3>Issue Book</h3>
+                        <div class="full-width">
+                            <input class="form-input" type="text" placeholder="Book-Id" id="issue_bookid" />
+                        </div>
+                        <div class="full-width">
+                            <input class="form-input" type="text" placeholder="User-Id" id="issue_userid" />
+                        </div>
+                        <div class="full-width">
+                            <input class="form-input" type="text" placeholder="Coppy's" id="issue_bookcount" />
+                        </div>
+                        <div class="full-width">
+                            <input class="form-input" type="date" placeholder="Issue-Date" id="issue_date" />
+                        </div>
+                        <button class="form-btn" id="issue-book-btn">issue</button>
+                    </div>
+                </form>
+                <div class="issue-info-div" id="issue-info">
+                    <div class="info">
+                        <h4>Book Title</h4>
+                        <p>--------</p>
+                    </div>
+                    <div class="info">
+                        <h4>Author</h4>
+                        <p>--------</p>
+                    </div>
+                    <div class="info">
+                        <h4>Garner</h4>
+                        <p>-----------</p>
+                    </div>
+                    <div class="info">
+                        <h4>Publish Date</h4>
+                        <p>----------</p>
+                    </div>
+                    <div class="info">
+                        <h4>Number of Coppy's</h4>
+                        <p>----------</p>
+                    </div>
+                    <div class="info">
+                        <h4>ReturnDate</h4>
+                        <p>-----------</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="comon-table-div">
+                <table class="table-style" id="issue-table">
+
+                </table>
+            </div>
+
+        </div>
+
+        <div class="add-book-div display-none" id="add-book-div">
+
+            <form id="add-new-book">
+                <div class="add-newbook">
+                    <h3>Add New Book</h3>
+                    <div class="full-width">
+                        <input class="form-input" type="text" placeholder="ISBN-10" id="bookisbn" />
+                    </div>
+                    <div class="full-width">
+                        <input class="form-input" type="text" placeholder="Book-Title" id="title" />
+                    </div>
+                    <div class="full-width">
+                        <input class="form-input" type="text" placeholder="Author" id="author" />
+                    </div>
+                    <div class="full-width">
+                        <input class="form-input" type="text" placeholder="Garner" id="garner" />
+                    </div>
+                    <div class="full-width">
+                        <input class="form-input" type="text" placeholder="Numbers of Coppy's" id="coppys" />
+                    </div>
+                    <div class="full-width">
+                        <input class="form-input" type="text" placeholder="Publish-Year " id="publish_year" />
+                    </div>
+                    <button class="form-btn" id="addnewbook-btn">Add-Book</button>
+                    <h4 id="addmassage" style="text-align: center;"></h4>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="reseve-book-div display-none" id="reseve-book-div">
+            <form id="recebook-form">
+                <div class="receive-book-inputs">
+                    <h3>Receive Book</h3>
+                    <div class="full-width">
+                        <input id="receive_userid" class="form-input" type="text" placeholder="User-Id">
+                    </div>
+                    <div class="full-width">
+                        <input id="receive_bookid" class="form-input" type="text" placeholder="Book-ISBN">
+                    </div>
+                    <div class="full-width">
+                        <input id="receive_count" class="form-input" type="text" placeholder="Count">
+                    </div>
+                    <button class="form-btn" id="receive-book-btn">Receive</button>
+                    <h4 id="receivemassage" style="text-align: center;"></h4>
+                </div>
+            </form>
+            <div class="recivebook">
+                <ul id="user_issuebooks">
+                 
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="inventory display-none" id="inventory-div">
+            <div class="title">
+                <h3>Inventory</h3>
+            </div>
+            <div class="inventory-control">
+                <div class="inventory-button">
+                    <button>Resent</button>
+                    <button>Last-Week</button>
+                    <button>Last-Month</button>
+                    <button>All-Books</button>
+                    <button>Catagary's</button>
+                </div>
+                <div class="search">
+                    <button class="search-btn">Search</button>
+                    <input class="search-input" type="text" placeholder="search hear">
+                </div>
+            </div>
+            <div class="comon-table">
+                <table class="table-style" id="inventory-table">
+                </table>
+            </div>
+
+            <div id="edit-modal" class="modal">
+                <div class="modal-content">
+
+                    <h2 class="modal-head">Edit Book</h2>
+                    <span class="close-btn">&times;</span>
+                    <form id="edit-book-form">
+                        <div class="inputs">
+                            <div class="edit-input">
+                                <label for="edit-id">Book-Id:</label>
+                                <input type="text" id="edit_bookisbn"  class="form-input">
+                            </div>
+                            <div class="edit-input">
+                                <label for="edit-title">Title:</label>
+                                <input type="text" id="edit_title" class="form-input" required>
+                            </div>
+                            <div class="edit-input">
+                                <label for="edit-genre">Author:</label>
+                                <input type="text" id="edit_author"class="form-input" required>
+                            </div>
+                            <div class="edit-input"> 
+                                <label for="edit-genre">Genre:</label>
+                                <input type="text" id="edit_genre"  class="form-input" required>
+                            </div>
+                            <div class="edit-input"> 
+                                <label for="edit-copies">Copies:</label>
+                                <input type="number" id="edit_copies"  min="1" class="form-input" required>
+                            </div>
+                            <div class="edit-input">
+                                <label for="edit-publish-year">Publish-Year:</label>
+                                <input type="text" id="edit_publish_year" class="form-input" required>
+                            </div>
+                            <div class="edit-input">
+                                <label for="edit-add-date">Add Date:</label>
+                               <input type="date" id="edit_add_date" class="form-input" required>
+                           </div>
+                          
+                            
+                        </div>
+                      
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="requst display-none" id="requst-div">
+            <div class="title">
+                <h3>Requsts</h3>
+            </div>
+            <div class="requst-control">
+                <div class="req-button">
+                    <button>Resent</button>
+                    <button>Last-Week</button>
+                    <button>Last-Month</button>
+                    <button>All-Requst</button>
+                </div>
+            </div>
+            <div class="requst-table comon-table">
+                <table class="table-style" id="requst_table">
+
+
+
+
+                </table>
+            </div>
+        </div>
+
+        <div class="notifcations display-none" id="notifcations-div">
+            <div class="title">
+                <h3>Notifcations</h3>
+            </div>
+            <div class="notifcations-control">
+                <div class="inventory-button">
+                    <button>Resent</button>
+                    <button>Last-Week</button>
+                    <button>All-Notifcations</button>
+                </div>
+            </div>
+            <div class="notifcations-tabel comon-table">
+                <table class="table-style" id="notifcations_table">
+             
+                </table>
+            </div>
+        </div>
+
+        <div class="manage-user display-none" id="manage-user-div">
+            <div class="title">
+                <h3>manage-user</h3>
+            </div>
+            <div class="manage-user-control">
+
+                <div class="search">
+                    <button class="search-btn">Search</button>
+                    <input class="search-input" type="text" placeholder="search hear">
+                </div>
+            </div>
+            <div class="manage-user-table comon-table">
+                <table class="table-style" id="user-table">
+
+                </table>
+            </div>
+
+        </div>
+
+        <div class="history display-none" id="history-div">
+            <div class="title">
+                <h3 id="historyoption-title">Add-History</h3>
+            </div>
+
+
+            <div class="history-option">
+                <button id="addhistory">Add-History</button>
+                <button id="issuehistory">Issue-History</button>
+                <button id="returnhistory">Return-Hisory</button>
+            </div>
+            <div class="history-control">
+                <button>Resent</button>
+                <button>Last-Week</button>
+                <button>Last-Month</button>
+                <button>All</button>
+            </div>
+
+            <div class="comon-table " id="history-table-div">
+                <table class="table-style" id="history_table">
+                </table>
+            </div>
+        </div>
+        <div class="report display-none" id="report-div">
+            <div class="inventory-control">
+                <div class="inventory-button">
+                    <button id="inventory_report_btn">Inventory-Report</button>
+                    <button id="member_report_btn">Member-Report</button>
+                    <button id="brow_repport_btn">Brow-Report</button>
+                </div>
+            </div>
+            <div class="report" id="report_div">
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="admin.js"></script>
+    <script src="admin_menu_control.js"></script>
+</body>
+
+</html>
